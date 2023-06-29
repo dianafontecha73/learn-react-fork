@@ -54,10 +54,10 @@ primer-react
 - **public** -> assets que se pueden presentar en la páginas (SVG, JPG, PNG...)
 - **src** -> "source" del proyecto, es donde suelen estar los principales archivos
   - **assets** -> aquí podemos colocar más imágenes, media, etc.
-  - **App.css** -> coming soon
-  - **App.jsx** -> coming soon
-  - **index.css** -> coming soon
-  - **main.jsx** -> coming soon
+  - **App.css** -> hoja de estilos del componente `App.jsx` o `App.js`
+  - **App.jsx** -> componente `App` -> página de inicio
+  - **index.css** -> hoja de estilos principal
+  - **main.jsx** -> componente principal que crea el elemento `root` del proyecto
     
 
 ## Referencias
