@@ -37,15 +37,28 @@ Iniciamos el proyecto:
 yarn dev
 ``` 
 ## Estructura de archivos
-
 ```
 primer-react
-  node_modules -> librerías/módulos de npm, yarn, etc. 
-  public -> assets que se pueden presentar en la páginas (SVG, JPG, PNG...)
-  src -> "source" del proyecto, es donde suelen estar los principales archivos
-    assets -> aquí podemos colocar más imágenes, media, etc.
-    
+  public
+    vite.svg
+    react.svg
+  src
+  index.html
+  .eslintrc.cjs
+  vite.config.js
+  .gitignore
+  package.json
 ```
+
+- node_modules -> librerías/módulos de npm, yarn, etc. 
+- public -> assets que se pueden presentar en la páginas (SVG, JPG, PNG...)
+- src -> "source" del proyecto, es donde suelen estar los principales archivos
+  - assets -> aquí podemos colocar más imágenes, media, etc.
+  - App.css
+  - App.jsx
+  - index.css
+  - main.jsx
+    
 
 ## Referencias
 
