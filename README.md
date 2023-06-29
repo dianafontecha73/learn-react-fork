@@ -36,6 +36,17 @@ Iniciamos el proyecto:
 ```
 yarn dev
 ``` 
+## Estructura de archivos
+
+```
+primer-react
+  node_modules -> librerías/módulos de npm, yarn, etc. 
+  public -> assets que se pueden presentar en la páginas (SVG, JPG, PNG...)
+  src -> "source" del proyecto, es donde suelen estar los principales archivos
+    assets -> aquí podemos colocar más imágenes, media, etc.
+    
+```
+
 ## Referencias
 
 - [Tutorial Digital Ocean](https://www.digitalocean.com/community/tutorials/how-to-set-up-a-react-project-with-vite)
