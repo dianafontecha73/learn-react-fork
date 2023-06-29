@@ -1,7 +1,10 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
+import reactLogo from '/react.svg'
 import viteLogo from '/vite.svg'
+import meme from '/img/meme.png'
 import './App.css'
+
+const MiBoton = () => <button onClick={() => console.log("Click!")}>Click me</button>
 
 const MyAwesomeDiv = () => {
   return (<div>My div is amazin' bruh</div>)
@@ -32,6 +35,10 @@ function App() {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
+      <div>
+        <img src={meme} alt="meme" width={500}/>
+        <MiBoton/>
+      </div>
     </>
   )
 }
