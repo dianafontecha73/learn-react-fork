@@ -1,6 +1,13 @@
 # learn-react
 Repositorio para aprender React
 
+## ¿Why Vite?
+
+- Tradicionalmente, se ha usado `npx create-react-app` pero es muy lento y tarda mucho en cargar el servidor de desarollo.
+- Las mejores alternativas son:
+  - Vite -> `yarn create vite` o
+  - Next -> `npx create-next-app`
+
 ## Primeros pasos
 1. Instalar `yarn` en global:
 ```
