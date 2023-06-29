@@ -59,6 +59,11 @@ primer-react
   - **index.css** -> hoja de estilos principal
   - **main.jsx** -> componente principal que crea el elemento `root` del proyecto
     
+### Prioridad en hojas de estilo
+
+- Mismo selector -> tiene prioridad el `index.css` respecto del `App.css`
+- `inline` sigue teniendo máxima prioridad
+
 
 ## Referencias
 
