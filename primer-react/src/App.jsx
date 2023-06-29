@@ -8,43 +8,27 @@ import './Footer'
 import Footer from './Footer'
 
 // Definimos nuestras funciones
-export const MiBoton = () => <button onClick={() => console.log("Click!")}>Click me</button>
-
-const MyAwesomeDiv = () => {
-  return (<div>My div is amazin' bruh</div>)
-}
+export const MiBoton = () => <button onClick={() => alert("Hola!")}>Click me</button>
 
 // función principal del componente que es el principal "return" del component y se llaman igual:
 function App() {
   const [count, setCount] = useState(0)
   return (
     // Fragmento
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
+    <>  
       <h1>Primer React</h1>
-      <MyAwesomeDiv/>
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
+          Likes {count}
         </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
       </div>
       <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
+        Este es un proyecto de React 🚀
       </p>
 
       {/* Meme */}
       <div>
-        <img src={meme} alt="meme" width={500}/>
+        <img src={meme} alt="meme" width={300} style={{ margin: "0 auto", border: "3px solid black"}}/>
         <br />
         <MiBoton/>
       </div>

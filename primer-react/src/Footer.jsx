@@ -5,7 +5,7 @@ function Footer(){
     <>
     <div className="footer">
       <p>Esto es un Footer</p>
-      <p>&copy; 2023 - React cosas </p>
+      <p>¯\_(ツ)_/¯</p>
     </div>
     </>
   )
