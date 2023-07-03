@@ -28,7 +28,17 @@ function App() {
         <br />
         <div><a href='#'>Login</a></div>
         <SignedIn>
+          {/* Esto solo lo ven usuarios logeados */}
           <Welcome />
+          <div 
+          style={{
+            display: "flex", 
+            justifyContent: "center",
+            margin: "10px auto"
+            }}>
+          <div style={{ marginRight: "10px"}}>Perfil:</div>
+            <UserButton />
+          </div>
         </SignedIn>
         <SignedOut>
           <RedirectToSignIn />
