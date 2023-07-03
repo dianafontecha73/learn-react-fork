@@ -13,6 +13,7 @@ function App() {
     <>
       <ClerkProvider publishableKey={clerkPubKey}>
         <h1>Clerk</h1>
+        <button onClick={() => console.log(clerkPubKey)}>Top secret</button>
         <div><a href='#'>Registro</a></div>
         <br />
         <div><a href='#'>Login</a></div>
