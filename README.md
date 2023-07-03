@@ -71,5 +71,7 @@ primer-react
 - [W3Schools React](https://www.w3schools.com/react/react_render.asp)
 
 ## Clerk
+Proveedor de auth y social login para React y otros frameworks.
 
-[Tutorial - Cleark en React](https://clerk.com/docs/quickstarts/get-started-with-create-react-app)
+- Crear cuenta en [Clerk](https://dashboard.clerk.com/sign-up)
+- [Tutorial - Cleark en React](https://clerk.com/docs/quickstarts/get-started-with-create-react-app)
