@@ -80,3 +80,12 @@ Instalamos la librería con Yarn:
 ```
   yarn add @clerk/clerk-react
 ```
+### React-Router-DOM
+```
+  yarn add react-router-dom
+```
+[Ejemplo de rutas en 6.14.1](https://github.com/remix-run/react-router/tree/dev/examples/basic/src)
+```
+main.tsx
+App.tsx
+```
