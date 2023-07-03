@@ -10,6 +10,13 @@ body{
   background: linear-gradient(90deg, rgba(2,0,36,1) 0%, #2e026d 35%, #15162c 100%);
   color: #e2e8f0;
 }
+div > a {
+  color: #94a3b8;
+}
+div > a:hover{
+  color: #94a3b8;
+  text-decoration: underline;
+}
 .logo {
   height: 6em;
   padding: 1.5em;
