@@ -22,3 +22,8 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Este archivo tiene contraseñas, no se sube a Github
+# (NUNCA)
+# ((Acaba mal))
+.env
