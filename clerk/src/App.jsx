@@ -1,13 +1,13 @@
 import React from "react";
 import './App.css'
-// import {
-//   ClerkProvider,
-//   SignedIn,
-//   SignedOut,
-//   UserButton,
-//   useUser,
-//   RedirectToSignIn,
-// } from "@clerk/clerk-react";
+import {
+  ClerkProvider,
+  SignedIn,
+  SignedOut,
+  UserButton,
+  useUser,
+  RedirectToSignIn,
+} from "@clerk/clerk-react";
 
 import { Routes, Route, Outlet, Link } from "react-router-dom";
 
@@ -50,28 +50,7 @@ function App() {
           <Route path="*" element={<NoMatch />} />
         </Route>
       </Routes>
-    </div>
-      {/* <ClerkProvider publishableKey={clerkPubKey}>
-        <h1>Clerk</h1>
-        <div><a href='#'>Registro</a></div>
-        <br />
-        <div><a href='#'>Login</a></div>
-        <SignedIn>
-          <Welcome />
-          <div 
-          style={{
-            display: "flex", 
-            justifyContent: "center",
-            margin: "10px auto"
-            }}>
-          <div style={{ marginRight: "10px"}}>Perfil:</div>
-            <UserButton />
-          </div>
-        </SignedIn>
-        <SignedOut>
-          <RedirectToSignIn />
-        </SignedOut>
-      </ClerkProvider> */}
+    </div> 
     </>
   )
 }
@@ -82,17 +61,17 @@ function Layout() {
       {/* A "layout route" is a good place to put markup you want to
           share across all the pages on your site, like navigation. */}
       <nav>
-        <ul>
-          <li>
+        <ul style={{ listStyle: "none" }}>
+          <li className="nav-li">
             <Link to="/">Inicio</Link>
           </li>
-          <li>
+          <li className="nav-li">
             <Link to="/about">About</Link>
           </li>
-          <li>
+          <li className="nav-li">
             <Link to="/dashboard">Dashboard</Link>
           </li>
-          <li>
+          <li className="nav-li">
             <Link to="/nothing-here">Nothing Here</Link>
           </li>
         </ul>
@@ -113,6 +92,27 @@ function Home() {
     <div>
       <h2>Inicio</h2>
       <p>Donde la cosas comienzan.</p>
+      <ClerkProvider publishableKey={clerkPubKey}>
+        <h3>Clerk</h3>
+        {/* <div><a href='#'>Registro</a></div>
+        <br />
+        <div><a href='#'>Login</a></div> */}
+        <SignedIn>
+          <Welcome />
+          <div 
+          style={{
+            display: "flex", 
+            justifyContent: "center",
+            margin: "10px auto"
+            }}>
+          <div style={{ marginRight: "10px"}}>Perfil:</div>
+            <UserButton />
+          </div>
+        </SignedIn>
+        <SignedOut>
+          <RedirectToSignIn />
+        </SignedOut>
+      </ClerkProvider> 
     </div>
   );
 }
