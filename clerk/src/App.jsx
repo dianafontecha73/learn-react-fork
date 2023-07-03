@@ -6,8 +6,9 @@ function App() {
     <>
       
       <h1>Clerk</h1>
-      <div>Registro</div>
-      <div>Login</div>
+      <div><a href='#'>Registro</a></div>
+      <br />
+      <div><a href='#'>Login</a></div>
 
     </>
   )

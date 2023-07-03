@@ -74,4 +74,9 @@ primer-react
 Proveedor de auth y social login para React y otros frameworks.
 
 - Crear cuenta en [Clerk](https://dashboard.clerk.com/sign-up)
-- [Tutorial - Cleark en React](https://clerk.com/docs/quickstarts/get-started-with-create-react-app)
+- [Tutorial - Clerk en React](https://clerk.com/docs/quickstarts/get-started-with-create-react-app)
+
+Instalamos la librería con Yarn:
+```
+  yarn add  @clerk/clerk-react
+```
