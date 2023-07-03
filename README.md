@@ -78,5 +78,5 @@ Proveedor de auth y social login para React y otros frameworks.
 
 Instalamos la librería con Yarn:
 ```
-  yarn add  @clerk/clerk-react
+  yarn add @clerk/clerk-react
 ```
