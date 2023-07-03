@@ -69,3 +69,7 @@ primer-react
 
 - [Tutorial Digital Ocean](https://www.digitalocean.com/community/tutorials/how-to-set-up-a-react-project-with-vite)
 - [W3Schools React](https://www.w3schools.com/react/react_render.asp)
+
+## Clerk
+
+[Tutorial - Cleark en React](https://clerk.com/docs/quickstarts/get-started-with-create-react-app)
