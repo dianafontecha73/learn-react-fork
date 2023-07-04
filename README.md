@@ -36,6 +36,28 @@ Proyecto creado con `npx create-react-app primer-react`. Se puede usar en Github
     - `App.js`: es el componente principal del proyecto.
     - `index.js`: es el punto de entrada del proyecto.
 
+## Producción
+Para crear el `build`de producción se usa el comando:
+```
+npm run build
+```
+Aparece una carpeta `build` con los archivos del proyecto.
+
+Para servir el build de producción (comprobamos que funcione):
+Instalamos `serve` (solo la primera vez):
+```
+npm install -g serve
+```
+Ejecutamos el build de producción:
+```
+serve -s build
+```
+También aparece en `localhost:3000` y en vuestra IP en la red local.
+## Deploy en Fleek
+- Crear cuenta en [Fleek](https://fleek.co/). Es un servicio de hosting para aplicaciones descentralizadas. Se puede conectar con Github y hacer deploy automático.
+
+- **Add new site**
+
 ## Referencias
 
 - W3schools: https://www.w3schools.com/react/react_getstarted.asp
