@@ -22,11 +22,11 @@ function App() {
       <h2>Últimos tweets</h2>
         <div>
           {/* Añadimos el operador && para que en caso de que no haya tweets la expresión no se ejecute -> el div aparece sin contenido */}
-          {tweets && tweets.map((tweet) => (
-           <div className="tweet-container" key={tweet.id}>
-            <p className="tweet-title">{tweet.id}</p>  
-            <p className="tweet-content">{tweet.content}</p>
-            <p className="tweet-footer">{timeAgo.format(new Date(tweet.created_on))} ·&nbsp;<strong>@{tweet.author}</strong>
+          {tweets && tweets.map(({id, content, created_on, author}) => (
+           <div className="tweet-container" key={id}>
+            <p className="tweet-title">{id}</p>  
+            <p className="tweet-content">{content}</p>
+            <p className="tweet-footer">{timeAgo.format(new Date(created_on))} ·&nbsp;<strong>@{author}</strong>
             </p>
            </div>
           ))}
