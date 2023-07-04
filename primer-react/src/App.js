@@ -1,4 +1,5 @@
 import './App.css';
+import image from './img/ops.jpeg';
 
 // Componente Footer
 function Footer() {
@@ -10,12 +11,19 @@ function Footer() {
   )
 }
 
+function Image(){
+  return (
+    <img src={image} width={250} alt='Ops' />
+  )
+}
+
 function App() {
   return (
     <>
     <div className='container'>
       <h1>Primer React</h1>
       <p>Este es el componente <code>App</code>.</p>
+      <Image />
       <Footer />
     </div>
     </>
