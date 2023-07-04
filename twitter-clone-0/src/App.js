@@ -1,15 +1,7 @@
 import logo from './assets/img/logo.png';
 import './App.css';
 import tweets from './assets/json/tweets.json';
-import TimeAgo from 'javascript-time-ago';
-// Español
-import es from 'javascript-time-ago/locale/es'
-
-// Colocamos el formato en el que queremos las conversiones
-TimeAgo.addDefaultLocale(es)
-
-// Creamos formatter (Español).
-const timeAgo = new TimeAgo('es-ES');
+import Tweet from './Tweet';
 
 function App() {
   return (
@@ -31,15 +23,4 @@ function App() {
   );
 }
 
-function Tweet(props){
-  const { id, content, author, created_on } = props
-
-  return(
-  <div className="tweet-container" key={id}>
-    <p className="tweet-title">{id}</p>  
-    <p className="tweet-content">"{content}"</p>
-    <p className="tweet-footer">{timeAgo.format(new Date(created_on))} ·&nbsp;<strong>@{author}</strong>
-  </p>
- </div>
-)}
 export default App;
