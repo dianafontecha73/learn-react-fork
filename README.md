@@ -31,6 +31,10 @@ Proyecto creado con `npx create-react-app primer-react`. Se puede usar en Github
 
   - `node_modules`: contiene las dependencias del proyecto.
   - `public`: contiene los archivos estáticos del proyecto.
+    `index.html`: es el archivo principal del proyecto. Aquí podemos colocar metatags, estilos previos a la carga de React (spinner), etc. **Es el único HTML de todo el proyecto**. Por eso se le llama **Single Page Application**. Por eso no se puede hacer SEO con React, para eso se necesita `NextJS`.
+  - `src`: contiene los archivos fuente del proyecto.
+    - `App.js`: es el componente principal del proyecto.
+    - `index.js`: es el punto de entrada del proyecto.
 
 ## Referencias
 
