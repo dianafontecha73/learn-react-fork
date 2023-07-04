@@ -1,6 +1,6 @@
 import logo from './assets/img/logo.png';
 import './App.css';
-import tweet from './assets/json/ejemplo.json';
+import tweets from './assets/json/tweets.json';
 
 function App() {
   return (
@@ -10,10 +10,16 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
         <h2>Últimos tweets</h2>
         <div>
-          Tweets coming soon
-          {/* Tweets desde JSON */}
+          {tweets.map((tweet) => (
+           <div>
+           {tweet.id} - 
+           {tweet.content} - 
+           {tweet.created_on} - 
+           {tweet.author}
+           </div>
+          ))}
           <p>
-          {tweet.id}: {tweet.content}
+          
           </p>
         </div>
       </header>
