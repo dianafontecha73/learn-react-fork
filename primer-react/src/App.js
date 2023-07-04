@@ -23,6 +23,7 @@ function App() {
     <div className='container'>
       <h1>Primer React</h1>
       <p>Este es el componente <code>App</code>.</p>
+      <p>Nueva línea.</p>
       <Image />
       <Footer />
     </div>
