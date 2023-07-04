@@ -9,7 +9,7 @@ import es from 'javascript-time-ago/locale/es'
 TimeAgo.addDefaultLocale(es)
 
 // Creamos formatter (Español).
-const timeAgo = new TimeAgo('es-ES')
+const timeAgo = new TimeAgo('es-ES');
 
 function App() {
   return (
@@ -23,12 +23,7 @@ function App() {
         <div>
           {/* Añadimos el operador && para que en caso de que no haya tweets la expresión no se ejecute -> el div aparece sin contenido */}
           {tweets && tweets.map(({id, content, created_on, author}) => (
-           <div className="tweet-container" key={id}>
-            <p className="tweet-title">{id}</p>  
-            <p className="tweet-content">{content}</p>
-            <p className="tweet-footer">{timeAgo.format(new Date(created_on))} ·&nbsp;<strong>@{author}</strong>
-            </p>
-           </div>
+            <Tweet key={id} author={author} content={content} created_on={created_on}/>
           ))}
         </div>
       </main>
@@ -36,7 +31,15 @@ function App() {
   );
 }
 
-function Tweets(tweets){
-  // return <div>...</div>
-}
+function Tweet(props){
+  const { id, content, author, created_on } = props
+
+  return(
+  <div className="tweet-container" key={id}>
+    <p className="tweet-title">{id}</p>  
+    <p className="tweet-content">"{content}"</p>
+    <p className="tweet-footer">{timeAgo.format(new Date(created_on))} ·&nbsp;<strong>@{author}</strong>
+  </p>
+ </div>
+)}
 export default App;
