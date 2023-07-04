@@ -4,7 +4,13 @@
 
 [Twitter Clone](./twitter-clone-0)
 
-Enlace a la app: https://morning-hat-8137.on.fleek.co/
+- Enlace a la app (bird): https://morning-hat-8137.on.fleek.co/
+
+- Pepe version: https://green-lab-6775.on.fleek.co
+
+### Configuración deploy en Fleek
+**NPM:**
+![Deploy NPM](deploy-npm.png)
 
 ## Referencias
 
