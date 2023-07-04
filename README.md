@@ -70,6 +70,9 @@ Configuración para el deploy:
   - Build command: `npm install && npm run build`
   - Publish directory: `build`
   - Base directory: por defecto sería `./` o `vacío`, en mi caso: `primer-react`
+
+Enlace a la app: https://morning-hat-8137.on.fleek.co/
+
 ## Referencias
 
 - W3schools: https://www.w3schools.com/react/react_getstarted.asp
