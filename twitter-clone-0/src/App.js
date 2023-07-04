@@ -16,7 +16,7 @@ function App() {
               <div className="tweet-item" key={tweet.id}>
                 <p className="tweet-field id">#{tweet.id}</p>
                 <p className="tweet-field content">{tweet.content}</p>
-                <p className="tweet-field author">{tweet.author}</p>
+                <p className="tweet-field author">{tweet.created_on} por <a href="#">@{tweet.author}</a></p>
               </div>
             ))}
           </div>
