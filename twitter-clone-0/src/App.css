@@ -36,3 +36,32 @@
     transform: rotate(360deg);
   }
 }
+
+/* Estilos personalizados */
+
+.tweet-container{
+  border: 1px solid rgb(150, 150, 150);
+  padding: 10px 20px;
+  border-radius: 10px;
+  margin: 10px auto;
+}
+.tweet-container:hover{
+  background-color: rgb(75, 75, 75);
+  border: 1px solid rgb(100, 100, 100);
+}
+.tweet-container > p{
+  margin: 0 auto;
+}
+.tweet-title{
+  display: flex;
+  justify-content: flex-start;
+  color:rgb(125, 125, 125);
+}
+.tweet-content{
+  color:rgb(200, 200, 200);
+}
+.tweet-footer{
+  display: flex;
+  justify-content: flex-end;
+  color:rgb(175, 175, 175);
+}

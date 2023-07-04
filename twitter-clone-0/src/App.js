@@ -12,16 +12,13 @@ function App() {
         <div>
           {/* Añadimos el operador && para que en caso de que no haya tweets la expresión no se ejecute -> el div aparece sin contenido */}
           {tweets && tweets.map((tweet) => (
-           <div>
-           {tweet.id} - 
-           {tweet.content} - 
-           {tweet.created_on} - 
-           @{tweet.author}
+           <div className="tweet-container">
+            <p className="tweet-title">{tweet.id}</p>  
+            <p className="tweet-content">{tweet.content}</p>
+            <p className="tweet-footer">{tweet.created_on} · <strong>@{tweet.author}</strong>
+            </p>
            </div>
           ))}
-          <p>
-          
-          </p>
         </div>
       </header>
     </div>
