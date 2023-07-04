@@ -15,7 +15,7 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  min-height: 25vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -39,8 +39,20 @@
 
 /* Estilos personalizados */
 
+main{
+  margin-top: 0;
+  padding: 20px auto;
+  background-color: #282c34;
+  min-height: 65vh;
+}
+main > h2 {
+  padding-top: 10px;
+  color: lightgray;
+  margin-top: 0;
+}
 .tweet-container{
   border: 1px solid rgb(150, 150, 150);
+  width: 50%;
   padding: 10px 20px;
   border-radius: 10px;
   margin: 10px auto;
