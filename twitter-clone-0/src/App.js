@@ -10,12 +10,13 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
         <h2>Últimos tweets</h2>
         <div>
-          {tweets.map((tweet) => (
+          {/* Añadimos el operador && para que en caso de que no haya tweets la expresión no se ejecute -> el div aparece sin contenido */}
+          {tweets && tweets.map((tweet) => (
            <div>
            {tweet.id} - 
            {tweet.content} - 
            {tweet.created_on} - 
-           {tweet.author}
+           @{tweet.author}
            </div>
           ))}
           <p>
