@@ -57,7 +57,19 @@ También aparece en `localhost:3000` y en vuestra IP en la red local.
 - Crear cuenta en [Fleek](https://fleek.co/). Es un servicio de hosting para aplicaciones descentralizadas. Se puede conectar con Github y hacer deploy automático.
 
 - **Add new site**
-
+Conectad a Github y seleccionad repositorio:
+![Seleccionar repositorio](1.png)
+Siguiente paso, continuar:
+![Hosting Platform](2.png)
+Configuración para el deploy:
+![Configuración para el deploy](3.png)
+  - Repository: seleccionar el repositorio en el paso anterior.
+  - Branch: `main` por defecto, en mi caso es `cen`.
+  - Framework: `Other`.
+  - Docker image: `fleek/create-react-app:node-16`
+  - Build command: `npm install && npm run build`
+  - Publish directory: `build`
+  - Base directory: por defecto sería `./` o `vacío`, en mi caso: `primer-react`
 ## Referencias
 
 - W3schools: https://www.w3schools.com/react/react_getstarted.asp
