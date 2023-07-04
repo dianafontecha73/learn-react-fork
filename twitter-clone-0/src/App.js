@@ -11,12 +11,13 @@ function App() {
         <div>
           <h2>Últimos Tweets</h2>
           <div className="tweet-container">
+            {/* Cuando hacemos listas en React, se debe colocar un atributo "key" que sea único para que React pueda actualizar bien lo campos. Se suele usar un id. */}
             {tweets.map((tweet) => (
-              <div className="tweet-item">
+              <div className="tweet-item" key={tweet.id}>
                 <p className="tweet-field id">#{tweet.id}</p>
                 <p className="tweet-field content">{tweet.content}</p>
                 <p className="tweet-field author">{tweet.author}</p>
-                </div>
+              </div>
             ))}
           </div>
         </div>
