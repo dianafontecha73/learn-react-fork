@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1,
+    "content": "Esto es un tweet de prueba 1",
+    "author": "César"
+  },
+  {
+    "id": 2,
+    "content": "Esto es un tweet de prueba 2",
+    "author": "César"
+  },
+  {
+    "id": 3,
+    "content": "Esto es un tweet de prueba 3",
+    "author": "César"
+  }
+]
