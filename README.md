@@ -31,6 +31,7 @@ Instalamos la librería de Clerk para React:
   npm install @clerk/clerk-react
 ```
 - Creamos .env con "publishable key" > `API Keys`
+- Tutorial de Clerk: https://clerk.com/docs/quickstarts/get-started-with-create-react-app
 
 ## Referencias
 
