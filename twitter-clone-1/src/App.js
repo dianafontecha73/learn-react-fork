@@ -38,6 +38,7 @@ function App() {
 function Layout() {
   return (
     <>
+    <div className='layout'>
     <header className="App-header">
     <div className='brand'>
         <h1>Twitter clone v0</h1>
@@ -65,7 +66,10 @@ function Layout() {
       {/* An <Outlet> renders whatever child route is currently active,
           so you can think about this <Outlet> as a placeholder for
           the child routes we defined above. */}
-      <Outlet />
+      <div className='outlet'>
+        <Outlet />
+      </div>
+    </div>
     </>
   );
 }
@@ -97,9 +101,9 @@ function Dashboard() {
 function NoMatch() {
   return (
     <div>
-      <h2>Nothing to see here!</h2>
+      <h2>Error 404</h2>
       <p>
-        <Link to="/">Go to the home page</Link>
+        No pudimos encontrar ese meme... <Link to="/">Volver a inicio</Link>
       </p>
     </div>
   );
