@@ -3,6 +3,13 @@ import './App.css';
 import tweets from './assets/json/tweets.json';
 import Tweet from './Tweet';
 import { Routes, Route, Outlet, Link } from "react-router-dom";
+import {
+  SignedIn,
+  SignedOut,
+  UserButton,
+  useUser,
+  RedirectToSignIn,
+} from "@clerk/clerk-react";
 
 function App() {
   return (
@@ -12,7 +19,16 @@ function App() {
             parent route elements. See the note about <Outlet> below. */}
       <Routes>
         <Route path="/" element={<Layout />}>
-          <Route index element={<Home />} />
+          <Route index element={
+          <>
+            <SignedIn>
+              <Home />
+            </SignedIn>
+            <SignedOut>
+              <RedirectToSignIn />
+            </SignedOut>
+          </>
+          } />
           <Route path="about" element={<About />} />
           <Route path="dashboard" element={<Dashboard />} />
 
@@ -22,15 +38,6 @@ function App() {
           <Route path="*" element={<NoMatch />} />
         </Route>
       </Routes>
-      <main>
-      <h2>Últimos tweets</h2>
-        <div>
-          {/* Añadimos el operador && para que en caso de que no haya tweets la expresión no se ejecute -> el div aparece sin contenido */}
-          {tweets && tweets.map(({id, content, created_on, author}) => (
-            <Tweet key={id} author={author} content={content} created_on={created_on}/>
-          ))}
-        </div>
-      </main>
     </div>
   );
 }
@@ -41,7 +48,7 @@ function Layout() {
     <div className='layout'>
     <header className="App-header">
     <div className='brand'>
-        <h1>Twitter clone v0</h1>
+        <h1>Twitter clone v1</h1>
         <img src={logo} className="App-logo" alt="logo" />
       </div>
       {/* A "layout route" is a good place to put markup you want to
@@ -59,6 +66,9 @@ function Layout() {
           </li>
           <li>
             <Link to="/nothing-here">Nothing Here</Link>
+          </li>
+          <li>
+            <UserButton />
           </li>
         </ul>
       </nav>
@@ -78,6 +88,15 @@ function Home() {
   return (
     <div>
       <h2>Home</h2>
+      <main>
+      <h2>Últimos tweets</h2>
+        <div>
+          {/* Añadimos el operador && para que en caso de que no haya tweets la expresión no se ejecute -> el div aparece sin contenido */}
+          {tweets && tweets.map(({id, content, created_on, author}) => (
+            <Tweet key={id} author={author} content={content} created_on={created_on}/>
+          ))}
+        </div>
+      </main>
     </div>
   );
 }
