@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "content": "Esto es un tweet de prueba 1",
+    "author": "César",
+    "created_on": "04-07-2023"
+  },
+  {
+    "id": 2,
+    "content": "Esto es un tweet de prueba 2",
+    "author": "César", 
+    "created_on": "04-07-2023"
+  },
+  {
+    "id": 3,
+    "content": "Esto es un tweet de prueba 3",
+    "author": "César",
+    "created_on": "04-07-2023"
+  }
+]
