@@ -48,6 +48,13 @@ import { LiaKiwiBirdSolid } from "react-icons/lia";
 ```
   <LiaKiwiBirdSolid />
 ```
+
+**antd**
+Componentes de React -> https://ant.design/docs/react/use-with-create-react-app
+
+```
+  npm install antd --save
+```
 ## Referencias
 
 - W3schools: https://www.w3schools.com/react/react_getstarted.asp
