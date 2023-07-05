@@ -76,7 +76,8 @@ h2{
 }
 /* nav */
 nav {
-  display: inline-block;
+  display: flex;
+  flex-direction: row;
   background-color: #282c34;
   padding: 10px;
   margin: 0;
@@ -89,6 +90,7 @@ nav a {
 }
 nav > ul {
   margin: 0;
+  margin-right: 10px;
   list-style: none;
 }
 nav > ul {

@@ -4,26 +4,45 @@ import tweets from './assets/json/tweets.json';
 import Tweet from './Tweet';
 
 import { Routes, Route, Outlet, Link } from "react-router-dom";
+// Componentes de Clerk
+import {
+  SignedIn,
+  SignedOut,
+  UserButton,
+  useUser,
+  // RedirectToSignIn,
+} from "@clerk/clerk-react";
 
 function App() {
   return (
-    <div className="App">
-      {/* Routes nest inside one another. Nested route paths build upon
+    <>
+    {/* SignedIn se ve cuando se ha iniciado sesión */}
+    <SignedIn>
+      <div className="App">
+        {/* Routes nest inside one another. Nested route paths build upon
         parent route paths, and nested route elements render inside
         parent route elements. See the note about <Outlet> below. */}
-      <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route index element={<Home />} />
-          <Route path="about" element={<About />} />
-          <Route path="dashboard" element={<Dashboard />} />
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route index element={<Home />} />
+            <Route path="about" element={<About />} />
+            <Route path="dashboard" element={<Dashboard />} />
 
-          {/* Using path="*"" means "match anything", so this route
-          acts like a catch-all for URLs that we don't have explicit routes for. */}
-          <Route path="*" element={<NoMatch />} />
-        </Route>
-      </Routes>
-      
-    </div>
+            {/* Using path="*"" means "match anything", so this route
+            acts like a catch-all for URLs that we don't have explicit routes for. */}
+            <Route path="*" element={<NoMatch />} />
+          </Route>
+        </Routes>
+      </div>
+    </SignedIn>
+
+    {/* Cuando no tienes sesión iniciada -> redirige a iniciar sesión */}
+    <SignedOut>
+      {/* TODO: Pantalla de bienvenida y un enlace a /signin donde salga el formulario de inicio de sesión o registro */}
+      <h1>Iniciar sesión</h1>
+      {/* <RedirectToSignIn /> */}
+    </SignedOut>
+    </>
   );
 }
 function Header(){
@@ -48,6 +67,9 @@ function Header(){
             <Link to="/nothing-here">404</Link>
           </li>
         </ul>
+        <div>
+          <UserButton />
+        </div>
       </nav>
     </header>
   )}
@@ -103,12 +125,49 @@ function Home() {
   );
 }
 
+const escribirPropiedades = (user) => {
+  let keys = Object.keys(user);
+  let obj = {};
+  for (let i = 0; i < keys.length; i++) {
+    if(typeof(user[keys[i]]) != 'function'){
+      obj[keys[i]] = user[keys[i]];
+    }
+  }
+  return console.log(obj)
+}
+const Greeting = () => {
+  // Use the useUser hook to get the Clerk.user object
+  const { isLoaded, isSignedIn, user } = useUser()
+
+  if (!isLoaded || !isSignedIn) {
+    return null
+  }
+  return (
+  <>
+  <h2>Usuario desde useUSer</h2>
+  <p>Hola, {user.firstName}</p>
+  <ul>
+    <li>id: {user.id}</li>
+    <li>Nombre: {user.firstName}</li>
+    <li>Apellidos: {user.lastName}</li>
+    <li>Nombre completo: {user.fullName}</li>
+    <li>
+      Imagen de perfil: {user.imageUrl}
+      <img src={user.profileImageUrl} width={300}/>
+    </li>
+    <li>Username: {user.username}</li>
+  </ul>
+  {escribirPropiedades(user)}
+  </>
+  )}
+
 function About() {
   return (
-    <div className='about'>
+    <div className='about' style={{paddingBottom: "75px"}}>
       <h2>About</h2>
       <p>Esto es el about</p>
       <p>Acerca de</p>
+      <Greeting />
     </div>
   );
 }
