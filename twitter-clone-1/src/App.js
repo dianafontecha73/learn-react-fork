@@ -11,9 +11,8 @@ function App() {
         <div>
           <h2>Últimos Tweets</h2>
           <div className="tweet-container">
-            {/* Cuando hacemos listas en React, se debe colocar un atributo "key" que sea único para que React pueda actualizar bien lo campos. Se suele usar un id. */}
-            {tweets.map(({id, content, author, created_on}) => (
-              <Tweet id={id} content={content} created_on={created_on} author={author} />
+            {tweets.map((tweet) => (
+              <Tweet {...tweet} />
             ))}
           </div>
         </div>
@@ -25,11 +24,14 @@ function App() {
 function Tweet(props){
   const {id, content, created_on, author} = props;
   return (
+    <>
+    {/* key: Cuando hacemos listas en React, se debe colocar un atributo "key" que sea único para que React pueda actualizar bien lo campos. Se suele usar un id. */}
     <div className="tweet-item" key={id}>
       <p className="tweet-field id">{id}</p>
       <p className="tweet-field content">{content}</p>
       <p className="tweet-field author">{created_on} por <a href="#">@{author}</a></p>
     </div>
+    </>
   )
 }
 
