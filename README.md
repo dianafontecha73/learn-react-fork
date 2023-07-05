@@ -2,7 +2,19 @@
 
 ## Proyectos
 
-[primer-react](./primer-react/)
+[primer-react](./primer-react/) Primer proyecto de React con `create-react-app` y `npm`.
+
+### Twitter clone
+[twitter-clone-0](./twitter-clone-1/) Primera parte del proyecto de clon de Twitter con `create-react-app` y `npm`.
+[twitter-clone-1](./twitter-clone-1/) Segunda parte del proyecto de clon de Twitter con `create-react-app` y `npm`.
+
+## Rutas en React
+
+Diagrama:
+<br>
+![Rutas](./rutas.png)
+
+---
 
 Proyecto creado con `npx create-react-app primer-react`. Se puede usar en Github con la [imagen de React en Codespaces](https://github.com/github/codespaces-react). Estos codespaces se pueden guardar como respositorios.
 
