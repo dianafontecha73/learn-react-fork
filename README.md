@@ -33,6 +33,21 @@ Instalamos la librería de Clerk para React:
 - Creamos .env con "publishable key" > `API Keys`
 - Tutorial de Clerk: https://clerk.com/docs/quickstarts/get-started-with-create-react-app
 
+**Iconos**
+
+https://react-icons.github.io/react-icons
+
+```
+npm install react-icons --save
+```
+
+```
+import { LiaKiwiBirdSolid } from "react-icons/lia";
+```
+
+```
+  <LiaKiwiBirdSolid />
+```
 ## Referencias
 
 - W3schools: https://www.w3schools.com/react/react_getstarted.asp

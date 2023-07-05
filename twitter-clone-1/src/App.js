@@ -11,6 +11,8 @@ import {
   RedirectToSignIn,
 } from "@clerk/clerk-react";
 
+import { LiaKiwiBirdSolid } from "react-icons/lia";
+
 function App() {
   return (
     <div className="App">
@@ -48,7 +50,7 @@ function Layout() {
     <div className='layout'>
     <header className="App-header">
     <div className='brand'>
-        <h1>Twitter clone v1</h1>
+        <h1><span style={{fontSize: "3rem"}}><LiaKiwiBirdSolid/></span> Twitter clone v1</h1>
         <img src={logo} className="App-logo" alt="logo" />
       </div>
       {/* A "layout route" is a good place to put markup you want to
@@ -92,6 +94,8 @@ function Home() {
       <h2>Últimos tweets</h2>
         <div>
           {/* Añadimos el operador && para que en caso de que no haya tweets la expresión no se ejecute -> el div aparece sin contenido */}
+
+          {/* TODO: hablar de esto */}
           {tweets && tweets.map(({id, content, created_on, author}) => (
             <Tweet key={id} author={author} content={content} created_on={created_on}/>
           ))}
