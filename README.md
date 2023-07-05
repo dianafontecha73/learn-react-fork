@@ -7,6 +7,7 @@
 ### Twitter clone
 [twitter-clone-0](./twitter-clone-1/) Primera parte del proyecto de clon de Twitter con `create-react-app` y `npm`.
 [twitter-clone-1](./twitter-clone-1/) Segunda parte del proyecto de clon de Twitter con `create-react-app` y `npm`.
+#### Rutas
   - Instalamos `react-router-dom` para las rutas.
     ```
       npm install react-router-dom
@@ -15,6 +16,12 @@
     - [Basic](https://github.com/remix-run/react-router/tree/dev/examples/basic/src)
     - [Tutorial](https://reactrouter.com/en/main/start/tutorial)
 
+#### Clerk
+  - Instalamos la librería de [Clerk](https:/clerk.com/) para la autenticación:
+    ```
+      npm install @clerk/clerk-react
+    ```
+  - Pasos en [Tutorial de Clerk](https://clerk.com/docs/quickstarts/get-started-with-create-react-app)
 ## Rutas en React
 
 Diagrama:
