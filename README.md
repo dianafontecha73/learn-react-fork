@@ -10,6 +10,7 @@
 
 ### Configuración deploy en Fleek
 **NPM:**
+<br>
 ![Deploy NPM](deploy-npm.png)
 
 ## Referencias
