@@ -13,6 +13,9 @@ import {
 
 import { LiaKiwiBirdSolid } from "react-icons/lia";
 
+import { Button, Input } from 'antd';
+const { TextArea } = Input;
+
 function App() {
   return (
     <div className="App">
@@ -86,11 +89,37 @@ function Layout() {
   );
 }
 
+function TweetForm(){
+  const handleTextArea = (e) => {
+    console.log(e.target.value)
+  }
+  return (
+    <>
+    {/* TODO: Hacer clases :) */}
+    <div style={{ width: "50%", margin: "10px auto", padding: "10px"}}>
+      <form>
+        <TextArea 
+        rows={4} 
+        maxLength={150} 
+        placeholder='🐦¿Qué está pasando?🐦'
+        onChange={handleTextArea}
+        />
+        <div style={{ display: "flex", flexDirection: "row", justifyContent: "space-between", paddingTop: "5px", alignItems: "center"}}>
+        <p style={{color:"white"}}>Abre consola y escribe algo :)</p>
+        <Button type="primary">Tuit! <LiaKiwiBirdSolid/></Button>
+        </div>
+      </form>
+    </div>
+    </>
+  )
+}
+
 function Home() {
   return (
     <div>
       <h2>Home</h2>
       <main>
+      <TweetForm />
       <h2>Últimos tweets</h2>
         <div>
           {/* Añadimos el operador && para que en caso de que no haya tweets la expresión no se ejecute -> el div aparece sin contenido */}
