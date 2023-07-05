@@ -14,7 +14,8 @@
 ![Deploy NPM](deploy-npm.png)
 
 [Twitter Clone v1](./twitter-clone-1/)
-Rutas:
+
+**Rutas:**
 <br>
 ```
   npm install react-router-dom
@@ -22,6 +23,14 @@ Rutas:
 - 6.14.1
 - Basic: https://github.com/remix-run/react-router/tree/dev/examples/basic/src
 - Tutorial: https://reactrouter.com/en/main/start/tutorial
+
+**Clerk**
+<br>
+Instalamos la librería de Clerk para React:
+```
+  npm install @clerk/clerk-react
+```
+- Creamos .env con "publishable key" > `API Keys`
 
 ## Referencias
 
