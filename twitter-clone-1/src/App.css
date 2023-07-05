@@ -1,14 +1,29 @@
+/* Header */
 .App {
   text-align: center;
+  background-color: #282c34;
 }
 
 .App-logo {
+  display: inline-block;
   margin: 20px;
   width: auto;
-  height: 20vmin;
+  height: 5vmin;
   pointer-events: none;
   border: 1px solid lightgray;
   border-radius: 100%;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  margin: 0 10px;
+  color: white;
+  text-decoration: none;
+}
+.brand > h1 {
+  font-size: 2rem;
+  display: inline-block;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -19,11 +34,12 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 30vh;
+  min-height: 5vh;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  padding: 20px;
   font-size: calc(10px + 2vmin);
   color: white;
 }
@@ -43,6 +59,12 @@
 
 /* Estilos personalizados */
 
+/* Layout */
+
+.layout{
+  min-height: 100vh;
+}
+
 h1{
   margin-top: 10px;
 }
@@ -54,6 +76,7 @@ h2{
 }
 /* nav */
 nav {
+  display: inline-block;
   background-color: #282c34;
   padding: 10px;
   margin: 0;
@@ -71,7 +94,10 @@ nav > ul {
 nav > ul {
   padding-left: 0;
 }
-
+.navbar li{
+  display: inline-block;
+  margin: 0 10px;
+}
 /* Tweets */
 
 main{
@@ -134,4 +160,26 @@ main h2 {
   color:rgb(221, 205, 205);
   text-decoration: none;
   font-weight: bold;
+}
+
+/* About y Dashboard */
+.about, .dashboard, .nomatch{
+  color: white;
+}
+.about a, .dashboard a, .nomatch a{
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Footer */
+
+footer{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #1d1e1f;
+  color: white;
+  padding: 10px;
+  text-align: center;
 }
