@@ -10,7 +10,7 @@ import {
   SignedOut,
   UserButton,
   useUser,
-  // RedirectToSignIn,
+  RedirectToSignIn,
 } from "@clerk/clerk-react";
 
 function App() {
@@ -39,8 +39,8 @@ function App() {
     {/* Cuando no tienes sesión iniciada -> redirige a iniciar sesión */}
     <SignedOut>
       {/* TODO: Pantalla de bienvenida y un enlace a /signin donde salga el formulario de inicio de sesión o registro */}
-      <h1>Iniciar sesión</h1>
-      {/* <RedirectToSignIn /> */}
+      {/* <h1>Iniciar sesión</h1> */}
+      <RedirectToSignIn />
     </SignedOut>
     </>
   );
