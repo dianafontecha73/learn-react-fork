@@ -7,6 +7,13 @@
 ### Twitter clone
 [twitter-clone-0](./twitter-clone-1/) Primera parte del proyecto de clon de Twitter con `create-react-app` y `npm`.
 [twitter-clone-1](./twitter-clone-1/) Segunda parte del proyecto de clon de Twitter con `create-react-app` y `npm`.
+  - Instalamos `react-router-dom` para las rutas.
+    ```
+      npm install react-router-dom
+    ```
+  - Usamos la versión `6.14.1` de React Router DOM. Referencias:
+    - [Basic](https://github.com/remix-run/react-router/tree/dev/examples/basic/src)
+    - [Tutorial](https://reactrouter.com/en/main/start/tutorial)
 
 ## Rutas en React
 
