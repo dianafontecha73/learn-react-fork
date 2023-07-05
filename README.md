@@ -1,14 +1,34 @@
 # learn-react
 Repositorio para aprender React
 
-## ¿Why Vite?
+## ¿Qué hay en esta rama `main`?
+
+[primer-react](./primer-react) Proyecto de React con `yarn` y `vite`. Ejemplo de cómo crear un proyecto de React.
+[clerk](./clerk) Proyecto con `yarn` y `vite`. Login y registro con [Clerk](https://clerk.com/).
+
+---
+## yarn & npm
+
+`yarn` y `npm` son gestores de paquetes habituales de `Node` con los cuales podemos crear proyectos de `React`fácilmente. Con ambos se puede crear proyecto usando `create-react-app` pero:
+
+`vite` es más rápido que `create-react-app` 
+
+Comandos:
+```
+yarn <-> npm install
+yarn add <package> <-> npm install <package>
+yarn dev <-> npm start
+```
+
+## Entonces, why Vite?
 
 - Tradicionalmente, se ha usado `npx create-react-app` pero es muy lento y tarda mucho en cargar el servidor de desarollo.
 - Las mejores alternativas son:
   - Vite -> `yarn create vite` o
   - Next -> `npx create-next-app`
+  - Etc. [Más info sobre Vite](https://vitejs.dev/)
 
-## Primeros pasos
+## Primeros pasos - yarn
 1. Instalar `yarn` en global:
 ```
 npm install -g yarn
