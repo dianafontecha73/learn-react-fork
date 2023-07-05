@@ -3,7 +3,8 @@
 }
 
 .App-logo {
-  height: 20vmin;
+  height: 10vmin;
+  margin-left: 10px;
   pointer-events: none;
 }
 
@@ -17,9 +18,10 @@
   background-color: #282c34;
   min-height: 25vh;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  padding: 0 20px;
   font-size: calc(10px + 2vmin);
   color: white;
 }
@@ -38,7 +40,33 @@
 }
 
 /* Estilos personalizados */
-
+.brand{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.brand h1 {
+  font-size: 2rem;
+}
+.navbar{
+  background-color: #282c34;
+  padding: 10px 5px;
+}
+ul{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+}
+ul a {
+  color: white;
+}
+.navbar li{
+  margin: 0 5px;
+}
 main{
   margin-top: 0;
   padding: 20px auto;

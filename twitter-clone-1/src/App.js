@@ -22,10 +22,6 @@ function App() {
           <Route path="*" element={<NoMatch />} />
         </Route>
       </Routes>
-      <header className="App-header">
-        <h1>Twitter clone v0</h1>
-        <img src={logo} className="App-logo" alt="logo" />
-      </header>
       <main>
       <h2>Últimos tweets</h2>
         <div>
@@ -41,10 +37,15 @@ function App() {
 
 function Layout() {
   return (
-    <div>
+    <>
+    <header className="App-header">
+    <div className='brand'>
+        <h1>Twitter clone v0</h1>
+        <img src={logo} className="App-logo" alt="logo" />
+      </div>
       {/* A "layout route" is a good place to put markup you want to
           share across all the pages on your site, like navigation. */}
-      <nav>
+      <nav className='navbar'>
         <ul>
           <li>
             <Link to="/">Home</Link>
@@ -60,14 +61,12 @@ function Layout() {
           </li>
         </ul>
       </nav>
-
-      <hr />
-
+      </header>
       {/* An <Outlet> renders whatever child route is currently active,
           so you can think about this <Outlet> as a placeholder for
           the child routes we defined above. */}
       <Outlet />
-    </div>
+    </>
   );
 }
 
