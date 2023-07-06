@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import logo from './assets/img/logo.png';
 import './App.css';
-import tweets from './assets/json/tweets.json';
+// import tweets from './assets/json/tweets.json';
 import Tweet from './Tweet';
 import { Routes, Route, Outlet, Link } from "react-router-dom";
 import {
@@ -18,6 +18,7 @@ import { Button, Input } from 'antd';
 const { TextArea } = Input;
 
 function App() {
+
   return (
     <div className="App">
       {/* Routes nest inside one another. Nested route paths build upon
@@ -126,8 +127,25 @@ function TweetForm(){
 }
 
 function Home() {
+
+  const [tweets, setTweets] = useState([])
+
+  useEffect(() => {
+    // IDEA: poner una condición para que pida los tweets cada 1, 5 o 10 min como mínimo
+    const fetchUserData = () => {
+      fetch("https://79.143.92.203:3000/api/cdm/tweets")
+        .then(response => {
+          return response.json()
+        })
+        .then(tweets => {
+          setTweets(tweets)
+        })
+    }
+    fetchUserData()
+  }, []);
+
   return (
-    <div>
+    <div style={{paddingBottom: "10px", marginBottom: "0"}}>
       <h2>Home</h2>
       <main>
       <TweetForm />
