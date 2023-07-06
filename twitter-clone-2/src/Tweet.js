@@ -6,10 +6,13 @@ TimeAgo.addDefaultLocale(es)
 // Creamos formatter (Español).
 const timeAgo = new TimeAgo('es-ES');
 
+// TODO: creamos enlace en todo el Tweet para ver una página con el tweet
+
 function Tweet(props){
   const { id, content, author, created_on } = props
 
   return(
+  // Link /tweets/1 ... 
   <div className="tweet-container" key={id}>
     <p className="tweet-title">{id}</p>  
     <p className="tweet-content">"{content}"</p>
