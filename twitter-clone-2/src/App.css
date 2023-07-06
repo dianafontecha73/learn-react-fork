@@ -110,6 +110,10 @@ main > h2 {
   color:rgb(175, 175, 175);
 }
 
+.tweet-link{
+  text-decoration: none;
+}
+
 /* .layout{
   border: 5px solid red;
 }

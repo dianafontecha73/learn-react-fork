@@ -155,7 +155,7 @@ function Home() {
 
           {/* TODO: hablar de esto */}
           {tweets && tweets.map(({id, content, created_on, author}) => (
-            <Tweet key={id} author={author} content={content} created_on={created_on}/>
+            <Tweet key={id} id={id} author={author} content={content} created_on={created_on}/>
           ))}
         </div>
       </main>
