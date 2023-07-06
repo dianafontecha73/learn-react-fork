@@ -1,0 +1,150 @@
+{
+	"info": {
+		"_postman_id": "e965abe4-ed84-4ba3-a0aa-28a85959d29e",
+		"name": "node-mini-server",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get all",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://79.143.92.203:3000/api/cdm/tweets",
+					"protocol": "http",
+					"host": [
+						"79",
+						"143",
+						"92",
+						"203"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"cdm",
+						"tweets"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get one",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://79.143.92.203:3000/api/cdm/tweets/1",
+					"protocol": "http",
+					"host": [
+						"79",
+						"143",
+						"92",
+						"203"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"cdm",
+						"tweets",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create one",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"content\": \"Esto es un tweet de prueba 1 desde Postman\",\r\n    \"author\": \"Pepe El Postmanero\",\r\n    \"created_on\": \"06-07-2023\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://79.143.92.203:3000/api/cdm/tweets",
+					"protocol": "http",
+					"host": [
+						"79",
+						"143",
+						"92",
+						"203"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"cdm",
+						"tweets"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://79.143.92.203:3000/api/cdm/tweets/4",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://79.143.92.203:3000/api/cdm/tweets/4",
+					"protocol": "http",
+					"host": [
+						"79",
+						"143",
+						"92",
+						"203"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"cdm",
+						"tweets",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Editar uno",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"content\": \"Esto es un tweet de prueba 1 EDITADO desde Postman\",\r\n    \"author\": \"Pepe\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://79.143.92.203:3000/api/cdm/tweets/1",
+					"protocol": "http",
+					"host": [
+						"79",
+						"143",
+						"92",
+						"203"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"cdm",
+						"tweets",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
