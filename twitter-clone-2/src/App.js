@@ -3,7 +3,7 @@ import logo from './assets/img/logo.png';
 import './App.css';
 // import tweets from './assets/json/tweets.json';
 import Tweet from './Tweet';
-import { Routes, Route, Outlet, Link } from "react-router-dom";
+import { Routes, Route, Outlet, Link, useParams } from "react-router-dom";
 import {
   SignedIn,
   SignedOut,
@@ -38,7 +38,14 @@ function App() {
           } />
           <Route path="about" element={<About />} />
           <Route path="dashboard" element={<Dashboard />} />
-
+          <Route
+          path="/tweets/:id"
+          loader={({ params }) => {
+            console.log(params.id); // 1, 2, 3...
+          }}
+          action={({ params }) => {}}
+          element={<TweetPage />}
+          />;
           {/* Using path="*"" means "match anything", so this route
                 acts like a catch-all for URLs that we don't have explicit
                 routes for. */}
@@ -49,6 +56,38 @@ function App() {
   );
 }
 
+function TweetPage(){
+  let params = useParams();
+
+  const [tweetId, setTweetId] = useState(params.id)
+  const [tweet, setTweet] = useState({})
+
+  useEffect(() => {
+    // IDEA: poner una condición para que pida los tweets cada 1, 5 o 10 min como mínimo
+    const fetchTweetById = () => {
+      fetch("https://79.143.92.203:3000/api/cdm/tweets/" + tweetId)
+        .then(response => {
+          return response.json()
+        })
+        .then(tweet => {
+          setTweet(tweet);
+          console.log(tweet);
+        })
+    }
+    fetchTweetById()
+  }, []);
+  return (
+  <>
+  <div style={{ color: "white"}}>
+    <h2>Tuit #{params.id}</h2>
+    {/* {tweet && <Tweet {...tweet} />} */}
+    {tweet && Object.keys(tweet).length > 0 
+    ? <Tweet {...tweet} /> 
+    : <div><div className="spinner"></div><p>Cargando tweet...</p></div>}
+  </div>
+  </>
+    )
+}
 function Layout() {
   return (
     <>
@@ -132,7 +171,7 @@ function Home() {
 
   useEffect(() => {
     // IDEA: poner una condición para que pida los tweets cada 1, 5 o 10 min como mínimo
-    const fetchUserData = () => {
+    const fetchTweets = () => {
       fetch("https://79.143.92.203:3000/api/cdm/tweets")
         .then(response => {
           return response.json()
@@ -141,21 +180,27 @@ function Home() {
           setTweets(tweets)
         })
     }
-    fetchUserData()
+    fetchTweets()
   }, []);
 
   return (
-    <div style={{paddingBottom: "10px", marginBottom: "0"}}>
+    <div style={{paddingBottom: "10px", marginBottom: "0", backgroundColor: "#282c34"}}>
       <h2>Home</h2>
-      <main>
-      <TweetForm />
+      <main style={{ width: "100vw"}}>
+      {/* TODO: Revisar T_T */}
+      {/* <TweetForm /> */}
       <h2>Últimos tweets</h2>
-        <div>
+        <div style={{width: "100%"}}>
           {/* Añadimos el operador && para que en caso de que no haya tweets la expresión no se ejecute -> el div aparece sin contenido */}
 
           {/* TODO: hablar de esto */}
           {tweets && tweets.map(({id, content, created_on, author}) => (
-            <Tweet key={id} id={id} author={author} content={content} created_on={created_on}/>
+            <Tweet 
+              key={id} 
+              id={id} 
+              author={author} 
+              content={content} 
+              created_on={created_on}/>
           ))}
         </div>
       </main>
