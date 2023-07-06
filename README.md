@@ -1,5 +1,10 @@
 # learn-react - CEN
 
+<!-- Cómo iniciar un proyecto de React
+Cómo añadir una librería
+Cómo añadir Clerk
+Cómo subir el proyecto a Fleek -->
+
 ## Proyectos
 
 [Twitter Clone](./twitter-clone-0)
@@ -55,6 +60,11 @@ Componentes de React -> https://ant.design/docs/react/use-with-create-react-app
 ```
   npm install antd --save
 ```
+
+[Twitter Clone v2](./twitter-clone-2/)
+
+`useState` y `useEffect`. Teoría en: https://www.w3schools.com/react/react_hooks.asp
+
 ## Referencias
 
 - W3schools: https://www.w3schools.com/react/react_getstarted.asp
