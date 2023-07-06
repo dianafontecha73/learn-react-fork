@@ -65,6 +65,8 @@ Componentes de React -> https://ant.design/docs/react/use-with-create-react-app
 
 `useState` y `useEffect`. Teoría en: https://www.w3schools.com/react/react_hooks.asp
 
+Rutas dinámicas: https://reactrouter.com/en/main/route/route#dynamic-segments
+
 ## Referencias
 
 - W3schools: https://www.w3schools.com/react/react_getstarted.asp
