@@ -33,7 +33,20 @@ function App() {
   }
   const handleSubmit = (e) => {
     e.preventDefault(); // Evita que se recargue la página
-    // fetch() para enviar los datos a un endpoint
+
+    // Envía los datos al servidor
+    const url = "http://localhost:3000/posts";
+    fetch(url, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        'Access-Control-Allow-Origin': '*'
+      },
+      body: JSON.stringify({title, content, tags})
+    })
+    .then(res => res.json())
+    .then(data => console.log(data));
+
     resetearCampos();
     alert("Datos enviados");
   }
