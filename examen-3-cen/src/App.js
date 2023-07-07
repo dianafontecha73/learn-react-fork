@@ -9,14 +9,20 @@ function App() {
 
   // Función que escribe el título en consola y actualiza el estado
   const handleTitle = (e) => {
-    // Actualiza el estado
+    // Actualiza el estado de title con el valor del input
     setTitle(e.target.value); // e.target.value es el valor del input
-    console.log(e.target.value);
+    console.log("title:", e.target.value);
   }
-
-  // TODO:
-  // handleContent
-  // handleTags
+  const handleTextarea = (e) => {
+    // Actualiza el estado del content con el valor del input
+    setContent(e.target.value); // e.target.value es el valor del textarea
+    console.log("content:", e.target.value);
+  }
+  const handleTags = (e) => {
+    // Actualiza el estado de tags con el valor del input
+    setTags(e.target.value); // e.target.value es el valor del input
+    console.log("tags:", e.target.value);
+  }
 
   return (
     <>
@@ -26,15 +32,14 @@ function App() {
       </header>
       <div className="container">
         <form>
-          
           <label>Titulo</label>
           <input type="text" placeholder="Titulo" onChange={handleTitle} />
           <br/>
           <label>Contenido</label>
-          <textarea placeholder="Contenido" defaultValue="Escribe el contenido..."></textarea>
+          <textarea placeholder="Contenido" defaultValue="Escribe el contenido..." onChange={handleTextarea}></textarea>
           <br/>
           <label>Etiquetas</label>
-          <input type="text" placeholder="Etiquetas separadas por comas" />
+          <input type="text" placeholder="Etiquetas separadas por comas" onChange={handleTags} />
           <br/>
           <button id="enviar-btn">Enviar</button>
         </form>
