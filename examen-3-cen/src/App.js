@@ -23,6 +23,20 @@ function App() {
     setTags(e.target.value); // e.target.value es el valor del input
     console.log("tags:", e.target.value);
   }
+  const resetearCampos = () => {
+    setTitle('');
+    setContent('');
+    setTags('');
+    document.getElementById("title").value = "";
+    document.getElementById("content").value = "";
+    document.getElementById("tags").value = "";
+  }
+  const handleSubmit = (e) => {
+    e.preventDefault(); // Evita que se recargue la página
+    // fetch() para enviar los datos a un endpoint
+    resetearCampos();
+    alert("Datos enviados");
+  }
 
   return (
     <>
@@ -33,15 +47,17 @@ function App() {
       <div className="container">
         <form>
           <label>Titulo</label>
-          <input type="text" placeholder="Titulo" onChange={handleTitle} />
+          <input id="title" type="text" placeholder="Titulo" onChange={handleTitle} />
           <br/>
           <label>Contenido</label>
-          <textarea placeholder="Contenido" defaultValue="Escribe el contenido..." onChange={handleTextarea}></textarea>
+          <textarea id="content" placeholder="Contenido" 
+          style={{height: "150px", width: "300px"}}
+          defaultValue="Escribe el contenido..." onChange={handleTextarea}></textarea>
           <br/>
           <label>Etiquetas</label>
-          <input type="text" placeholder="Etiquetas separadas por comas" onChange={handleTags} />
+          <input id="tags" type="text" placeholder="Etiquetas separadas por comas" onChange={handleTags} />
           <br/>
-          <button id="enviar-btn">Enviar</button>
+          <button id="enviar-btn" onClick={handleSubmit}>Enviar</button>
         </form>
       </div>
     </div>
