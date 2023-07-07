@@ -18,6 +18,8 @@ function App() {
           <br/>
           <label>Etiquetas</label>
           <input type="text" placeholder="Etiquetas separadas por comas" />
+          <br/>
+          <button id="enviar-btn">Enviar</button>
         </form>
       </div>
     </div>
