@@ -11,12 +11,23 @@ function App() {
       <h1>Crear Post</h1>
       <form style={{display: 'flex', flexDirection: 'column',  justifyContent: 'center', alignItems: 'center'}}>
         <label>Título:</label>
-        <input placeholder='Esto es un título :)' style={{width: '300px'}}/>
+        <input 
+        placeholder='Esto es un título :)' 
+        style={{width: '300px'}} 
+        onChange={() => console.log("título")}/>
         <label>Contenido:</label>
-        <textarea style={{width: '300px', height: '150px'}}>Hola</textarea>
+        <textarea 
+        style={{width: '300px', height: '150px'}}
+        defaultValue="Hola" 
+        onChange={() => console.log("content")}></textarea>
         <label>Etiquetas:</label>
-        <input placeholder='post, post, post' style={{width: '300px'}}/>
-        <button style={{marginTop: '10px', backgroundColor: "lightsalmon"}}>Enviar</button>
+        <input 
+        placeholder='post, post, post' 
+        style={{width: '300px'}} 
+        onChange={() => console.log("tags")}/>
+        <button 
+        style={{marginTop: '10px', backgroundColor: "lightsalmon"}} 
+        onClick={() => alert("enviado!")}>Enviar</button>
       </form>
     </>
   )
