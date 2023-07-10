@@ -19,24 +19,48 @@ function App() {
     console.log(e.target.value)
   }
   function handleSubmit(e){
-    alert("click!")
+    e.preventDefault()
+    // sendForm(title, content, tags)
+    setTitle('')
+    setContent('')
+    setTags('')
+    document.getElementById("title").value = ""
+    document.getElementById("content").value = ""
+    document.getElementById("tags").value = ""
+
+    const url = "http://localhost:3000/posts"
+    fetch(url, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "Access-Control-Allow-Origin": "*"
+      },
+      body: JSON.stringify({title, content, tags})
+    })
+    .then(res => res.json())
+    .then(data => console.log(data))
+    
+    alert("¡Formulario enviado!")
   }
   return (
     <>
       <h1>Crear Post</h1>
       <form style={{display: 'flex', flexDirection: 'column',  justifyContent: 'center', alignItems: 'center'}}>
         <label>Título:</label>
-        <input 
+        <input
+        id="title" 
         placeholder='Esto es un título :)' 
         style={{width: '300px'}} 
         onChange={handleTitle}/>
         <label>Contenido:</label>
-        <textarea 
+        <textarea
+        id="content" 
         style={{width: '300px', height: '150px'}}
         defaultValue="Hola" 
         onChange={handleContent}></textarea>
         <label>Etiquetas:</label>
         <input 
+        id="tags"
         placeholder='post, post, post' 
         style={{width: '300px'}} 
         onChange={handleTags}/>
