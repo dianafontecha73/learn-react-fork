@@ -49,7 +49,8 @@ function App() {
   return (
     <>
       <h1>Crear Post</h1>
-      <form style={{display: 'flex', flexDirection: 'column',  justifyContent: 'center', alignItems: 'center'}}>
+      <form 
+      style={{display: 'flex', flexDirection: 'column',  justifyContent: 'center', alignItems: 'center'}}>
         <label>Título:</label>
         <input
         id="title" 
