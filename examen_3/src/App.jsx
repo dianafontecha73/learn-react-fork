@@ -4,8 +4,18 @@ import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
-
+  function handleTitle(e){
+    console.log(e.target.value)
+  }
+  function handleContent(e){
+    console.log(e.target.value)
+  }
+  function handleTags(e){
+    console.log(e.target.value)
+  }
+  function handleSubmit(e){
+    console.log("click!")
+  }
   return (
     <>
       <h1>Crear Post</h1>
@@ -14,20 +24,20 @@ function App() {
         <input 
         placeholder='Esto es un título :)' 
         style={{width: '300px'}} 
-        onChange={() => console.log("título")}/>
+        onChange={handleTitle}/>
         <label>Contenido:</label>
         <textarea 
         style={{width: '300px', height: '150px'}}
         defaultValue="Hola" 
-        onChange={() => console.log("content")}></textarea>
+        onChange={handleContent}></textarea>
         <label>Etiquetas:</label>
         <input 
         placeholder='post, post, post' 
         style={{width: '300px'}} 
-        onChange={() => console.log("tags")}/>
+        onChange={handleTags}/>
         <button 
         style={{marginTop: '10px', backgroundColor: "lightsalmon"}} 
-        onClick={() => alert("enviado!")}>Enviar</button>
+        onClick={handleSubmit}>Enviar</button>
       </form>
     </>
   )
