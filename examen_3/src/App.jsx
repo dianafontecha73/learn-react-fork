@@ -1,20 +1,25 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
+  const [title, setTitle] = useState('')
+  const [content, setContent] = useState('')
+  const [tags, setTags] = useState('')
+
   function handleTitle(e){
+    setTitle(e.target.value)
     console.log(e.target.value)
   }
   function handleContent(e){
+    setContent(e.target.value)
     console.log(e.target.value)
   }
   function handleTags(e){
+    setTags(e.target.value)
     console.log(e.target.value)
   }
   function handleSubmit(e){
-    console.log("click!")
+    alert("click!")
   }
   return (
     <>
