@@ -44,6 +44,11 @@ function App() {
         style={{marginTop: '10px', backgroundColor: "lightsalmon"}} 
         onClick={handleSubmit}>Enviar</button>
       </form>
+      <hr />
+      <h2>Estados</h2>
+      <p>Título: {title}</p>
+      <p>Content: {content}</p>
+      <p>Tags: {tags}</p>
     </>
   )
 }
