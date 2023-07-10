@@ -18,16 +18,20 @@ function App() {
     setTags(e.target.value)
     console.log(e.target.value)
   }
-  function handleSubmit(e){
-    e.preventDefault()
-    // sendForm(title, content, tags)
+  function resetearForm(){
     setTitle('')
     setContent('')
     setTags('')
     document.getElementById("title").value = ""
     document.getElementById("content").value = ""
     document.getElementById("tags").value = ""
+  }
+  function handleSubmit(e){
+    e.preventDefault()
+    
+    resetearForm()
 
+    // IDEA: pasar el fetch a sendForm(title, content, tags)
     const url = "http://localhost:3000/posts"
     fetch(url, {
       method: "POST",
@@ -39,7 +43,7 @@ function App() {
     })
     .then(res => res.json())
     .then(data => console.log(data))
-    
+
     alert("¡Formulario enviado!")
   }
   return (
