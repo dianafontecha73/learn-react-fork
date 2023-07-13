@@ -24,7 +24,8 @@ b. Clonar proyecto:
 ```
 
 ## Live Share
-
+`Aqui solo hay diversión:`:
+https://prod.liveshare.vsengsaas.visualstudio.com/join?D7F785A68A375C53E3CB63DAF242A2303357
 --- 
 
 ## Página de referencia
