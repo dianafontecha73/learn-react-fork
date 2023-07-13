@@ -10,7 +10,7 @@ function App() {
       <h1>Blog</h1>
       <div className="card">
         <p>¡Bienvenid@ a mi Blog!</p>
-        <img src={logo} width={150}/>
+        <img src={logo} className="d-inline-block mx-auto" width={150}/>
       </div>
       <div>
         <Button variant="primary">Primary</Button>{' '}
