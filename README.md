@@ -49,7 +49,12 @@ b. Clonar proyecto:
 
 ## Bootstrap con React-Bootstrap
 [Instalación](https://react-bootstrap.netlify.app/docs/getting-started/introduction)
+1. Instalar módulo:
 ```
   npm install react-bootstrap bootstrap
 ```
-Ejemplo con botones: https://react-bootstrap.netlify.app/docs/getting-started/introduction
+2. Pegar ejemplo con botones: https://react-bootstrap.netlify.app/docs/getting-started/introduction
+3. Importar la hoja `bootstrap.min.css` en `main.jsx`:
+```
+  import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+```
