@@ -1,4 +1,3 @@
-// Versión con componentes de Home
 // import { useState } from 'react'
 import logo from '/favicon.png'
 import './App.css'
