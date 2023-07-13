@@ -6,15 +6,15 @@ import './App.css'
 const Home = () => {
   return (
   <>
-  <div id="home" className='border border-dark'>
+  <div id="home" className=''>
     <header>
       <Navbar />
     </header>
     <main>
       <Hero />
-      <Posts />
-      <Posts />
-      <Posts />
+      <Posts title="Últimos Posts" />
+      <Posts title="Guías" />
+      <Posts title="Consejos" />
       <Footer />
     </main>
   </div>
@@ -44,7 +44,7 @@ const Hero = () => {
   return (
   <>
   <div
-    className='p-0 text-center bg-image border-danger'
+    className='p-0 text-center bg-image'
     style={{ backgroundImage: "url('https://mdbootstrap.com/img/new/slides/041.webp')", height: 400 }}
       >
       <div className='mask' style={{ height: '100%', width: '100%', backgroundColor: 'rgba(0, 0, 0, 0.45)' }}>
@@ -61,13 +61,18 @@ const Hero = () => {
   </div> 
   </>
 )}
-const Posts = () => {
+const Posts = (props) => {
+  const {title} = props
   return (
   <>
-  <div className='border border-danger'>
-    <p>Posts</p> 
-    <p>Posts</p> 
-    <p>Posts</p>
+  <div className='container py-3'>
+    {title && <h2>{title}</h2>}
+    <div className='py-2'>
+    <p>Posts #1</p> 
+    <p>Posts #2</p> 
+    <p>Posts #3</p>
+    <p>Posts #4</p>
+    </div>
   </div>
   </>
 )}
