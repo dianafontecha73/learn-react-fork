@@ -1,12 +1,21 @@
 # learn-react
-Repositorio para aprender React
+Repositorio para aprender React. 
+
+Creación de proyecto (solo haced uno de estos):
 
 ```
   npm create vite
 ```
 
-React > Javascript > "blog"
+Clonar proyecto:
+```
+  git clone https://github.com/cesarlpb/learn-react.git
+```
 
+`"blog" > React > Javascript`
+
+---
+Una vez creado o clonado. Comandos para iniciar proyecto:                       
 ```
   cd blog
   npm i 
@@ -14,4 +23,5 @@ React > Javascript > "blog"
 ```
 
 ## Live Share
+
 --- 
