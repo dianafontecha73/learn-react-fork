@@ -26,3 +26,23 @@ b. Clonar proyecto:
 ## Live Share
 
 --- 
+
+## Página de referencia
+
+[Blog de viajes](https://www.viajeroscallejeros.com/)
+
+## Componentes
+
+```
+<App>
+  <Home>
+    -- <Header> 
+      -- <Navbar>   // Logo + Enlaces
+    -- <HeroBanner> // a veces es slider
+    -- <Posts>      // Últimos posts
+    -- <Posts>      // Guías
+    -- <Posts>      // Consejos
+    -- <Footer>
+      // 3 cols con enlaces
+      // <p> Texto ._. </p>
+```
