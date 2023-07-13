@@ -1,0 +1,5 @@
+# Archivos a ignorar en el repositorio
+.DS_Store
+node_modules
+.env
+*bak
