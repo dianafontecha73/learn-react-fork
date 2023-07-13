@@ -46,3 +46,10 @@ b. Clonar proyecto:
       // 3 cols con enlaces
       // <p> Texto ._. </p>
 ```
+
+## Bootstrap con React-Bootstrap
+[Instalación](https://react-bootstrap.netlify.app/docs/getting-started/introduction)
+```
+  npm install react-bootstrap bootstrap
+```
+Ejemplo con botones: https://react-bootstrap.netlify.app/docs/getting-started/introduction
