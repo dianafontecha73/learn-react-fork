@@ -16,7 +16,7 @@ const Home = () => {
 const Navbar = () => {
   return (
   <>
-    <div>
+    <div className='border border-danger'>
       <img src={logo} alt="logo :)" width={150} />
       <h2>Navbar</h2>
     </div> 
@@ -25,25 +25,30 @@ const Navbar = () => {
 const Hero = () => {
   return (
   <>
+  <div className='border border-danger'>
     <p>Hero</p> 
+  </div>
   </>
 )}
-
 const Posts = () => {
   return (
   <>
+  <div className='border border-danger'>
     <p>Posts</p> 
     <p>Posts</p> 
-    <p>Posts</p> 
+    <p>Posts</p>
+  </div>
   </>
 )}
-
 const Footer = () => {
   return (
   <>
+  <div className='border border-danger'>
     <p>Footer</p> 
+  </div>
   </>
 )}
+
 function App() {
 
   return (
