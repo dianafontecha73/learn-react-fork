@@ -36,15 +36,20 @@ b. Clonar proyecto:
 ```
 <App>
   <Home>
-    -- <Header> 
-      -- <Navbar>   // Logo + Enlaces
-    -- <Hero>       // a veces es slider
-    -- <Posts>      // Últimos posts
-    -- <Posts>      // Guías
-    -- <Posts>      // Consejos
-    -- <Footer>
+    -- <Header>     // no requiere trabajo
+      -- <Navbar>   // Logo + Enlaces -> estilos               "2/5"
+    -- <Hero>       // a veces es slider -> estilos             2/5
+    -- <PostContainer>      // Últimos posts -> renombrar a <Container> 3/5
+      --- <Post>   // Crear desde cero   3 o 4 / 5
+      --- <Post>
+      --- <Post>
+      --- <Post>
+    -- <PostContainer>      // Guías
+      ...
+    -- <PostContainer>      // Consejos
+      ...
+    -- <Footer>   // estilos  2/5
       // 3 cols con enlaces
-      // <p> Texto ._. </p>
 ```
 
 ## Bootstrap con React-Bootstrap

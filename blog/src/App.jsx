@@ -61,6 +61,7 @@ const Hero = () => {
   </div> 
   </>
 )}
+// Renombrar
 const Posts = (props) => {
   const {title} = props
   return (
@@ -68,6 +69,7 @@ const Posts = (props) => {
   <div className='container py-3'>
     {title && <h2>{title}</h2>}
     <div className='py-2'>
+    {/* Idea: Crear un componente <Post id="1" seoTitle="lorem" descripcion="seo" variant=""> */}
     <p>Posts #1</p> 
     <p>Posts #2</p> 
     <p>Posts #3</p>
