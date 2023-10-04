@@ -1,7 +1,33 @@
-// import { useState } from 'react'
-import logo from '/favicon.png'
+import { useState } from 'react'
+import logo from '/imagen-blog.png'
 import './App.css'
-// import Button from 'react-bootstrap/Button';
+import Button from 'react-bootstrap/Button';
+
+function App() {
+
+  return (
+    <>
+      <h1>Bienvenid@s a mi Blog</h1>
+      <div className="card">
+        <p>Todos somos amigos</p>
+       <img src={logo} className="d-inline-block mx-auto" width={150}/>
+      </div>
+      <div>
+      <Button variant="primary">Primary</Button>{' '}
+      <Button variant="secondary">Secondary</Button>{' '}
+      <Button variant="success">Success</Button>{' '}
+      <Button variant="warning">Warning</Button>{' '}
+      <Button variant="danger">Danger</Button>{' '}
+      <Button variant="info">Info</Button>{' '}
+      <Button variant="light">Light</Button>{' '}
+      <Button variant="dark">Dark</Button>
+      <Button variant="link">Link</Button>
+      </div>
+    </>
+  )
+}
+
+export default App
 
 const Home = () => {
   return (
@@ -39,6 +65,7 @@ const Navbar = () => {
     </div> 
   </>
 )}
+
 const Hero = () => {
   // Fuente: https://mdbootstrap.com/docs/react/extended/hero/
   return (
@@ -61,7 +88,7 @@ const Hero = () => {
   </div> 
   </>
 )}
-// Renombrar
+
 const Posts = (props) => {
   const {title} = props
   return (
@@ -69,7 +96,6 @@ const Posts = (props) => {
   <div className='container py-3'>
     {title && <h2>{title}</h2>}
     <div className='py-2'>
-    {/* Idea: Crear un componente <Post id="1" seoTitle="lorem" descripcion="seo" variant=""> */}
     <p>Posts #1</p> 
     <p>Posts #2</p> 
     <p>Posts #3</p>
@@ -170,14 +196,3 @@ const Footer = () => {
   </div>
   </>
 )}
-
-function App() {
-
-  return (
-    <>
-      <Home />
-    </>
-  )
-}
-
-export default App
